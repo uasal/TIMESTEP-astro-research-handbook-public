@@ -44,7 +44,7 @@ WSL is a Microsoft Windows add-on. The easiest way to install it is by using a P
 
 #### Verify Terminal is in Admin Mode
 
-After opening the terminal, verify that it is in admin mode by looking at the left side of the title bar. If it does not indicate administrative mode, as in the picture below, shut down the window and try the other method.
+After opening the terminal, verify that it is in admin mode by looking at the left side of the title bar. If it does not indicate 'Administrator', as in the picture below, shut down the window and try the other method.
 
  ![Elevated PowerShell](/Assets/Images/PowerShellWindow.png)
 
@@ -123,7 +123,7 @@ Almost any Linux distro can be installed into the WSL/WSL2 system, but these are
 
 Ubuntu 22.4.1 LTS takes maximal advantage of WSL2's GUI capabilities by utilizing a virtual GPU, called vGPU. To do this, it requires the installation of a specific video driver. The instructions for installing this driver are located here: [Enabling vGPU acceleration in Ubuntu](https://ubuntu.com/tutorials/enabling-gpu-acceleration-on-ubuntu-on-wsl2-with-the-nvidia-cuda-platform#1-overview).
 
-This extra step may seem like a reason to avoid the Ubuntu distribution, but the additional extra effort is well worth it. Just make sure that you follow the advice to make sure your processor is supported before you attempt the install. If it is not supported, you will not be able to install 22.4.1 LTS, as the OS will not run without the driver. You can still use Ubuntu; but you will have to use an earlier version, such as 20.04.5.
+*Note: This extra step may seem like a reason to avoid the Ubuntu distribution, but the additional extra effort is well worth it. Just make sure that you follow the advice to make sure your processor is supported before you attempt the install. If it is not supported, you will not be able to install 22.4.1 LTS, as the OS will not run without the driver. You can still use Ubuntu; but you will have to use an earlier version, such as 20.04.5.*
 
 #### Install The Distro
 
@@ -135,7 +135,7 @@ The first time you run the newly installed Linux system, you will start it from 
 
 ## Recommended Optional Steps
 
-There are a few more things to consider that will make your WLS Linux life much easier, including the selection of a terminal program and a recommended Python environment for Linux.
+There are a few more things to consider that will make your WLS Linux life much easier, including the selection of a terminal program and installation of the Anaconda Python environment for Linux.
 
 #### Choose a Terminal Program
 
