@@ -1,4 +1,4 @@
-![WL2 Linux](PenguinWindows.png)
+![WL2 Linux](/Assets/Images/PenguinWindows.png)
 
 ---
 
@@ -46,7 +46,7 @@ WSL is a Microsoft Windows add-on. The easiest way to install it is by using a P
 
 After opening the terminal, verify that it is in admin mode by looking at the left side of the title bar. If it does not indicate administrative mode, as in the picture below, shut down the window and try the other method.
 
- ![Elevated PowerShell](PowerShellWindow.png)
+ ![Elevated PowerShell](/Assets/Images/PowerShellWindow.png)
 
 #### Enable WSL
 
