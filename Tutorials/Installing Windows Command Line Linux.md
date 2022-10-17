@@ -119,17 +119,17 @@ Here are a few other Distros from the Microsoft Store:
 
 Almost any Linux distro can be installed into the WSL/WSL2 system, but these are the distros available through the Microsoft store that have been selected for compatability and (relatively) seemless installation. I would strongly suggest that if you do not choose Ubuntu, choose one of these.   
 
-#### If Choosing Ubuntu 22.4.1 LTS, This is an Additional Required Step
-
-Ubuntu 22.4.1 LTS takes maximal advantage of WSL2's GUI capabilities by utilizing a virtual GPU, called vGPU. To do this, it requires the installation of a specific video driver. The instructions for installing this driver are located here: [Enabling vGPU acceleration in Ubuntu](https://ubuntu.com/tutorials/enabling-gpu-acceleration-on-ubuntu-on-wsl2-with-the-nvidia-cuda-platform#1-overview).
-
-*Note: This extra step may seem like a reason to avoid the Ubuntu distribution, but the additional extra effort is well worth it. Just make sure that you follow the advice to make sure your processor is supported before you attempt the install. If it is not supported, you will not be able to install 22.4.1 LTS, as the OS will not run without the driver. You can still use Ubuntu; but you will have to use an earlier version, such as 20.04.5.*
-
 #### Install The Distro
 
 After you have finished downloading the distro, run the package and it will install to your machine. The installer will add an icon for the Linux OS to your Windows start menu. Note that any Linux apps that you install through the Linux OS will show up in a folder with the same name in your Windows start menu. You can start these apps from here, or through the Linux OS itself.
 
 The first time you run the newly installed Linux system, you will start it from here, just like any other app. It will open a window that will ask you to do some basic configuration, such as username and password. It may also ask you to pick a drive mount location; I would advise to accept the default. Be aware that this first run will be fairly slow moving, as Linux is configuring itself behind the scenes.
+
+#### If Installing Ubuntu 22.4.1 LTS, This is an Additional Required Step after Distro Install
+
+Ubuntu 22.4.1 LTS takes maximal advantage of WSL2's GUI capabilities by utilizing a virtual GPU, called vGPU. To do this, it requires the installation of a specific video driver. The instructions for installing this driver are located here: [Enabling vGPU acceleration in Ubuntu](https://ubuntu.com/tutorials/enabling-gpu-acceleration-on-ubuntu-on-wsl2-with-the-nvidia-cuda-platform#1-overview).
+
+*Note: This extra step may seem like a reason to avoid the Ubuntu distribution, but the additional extra effort is well worth it. Just make sure that you follow the advice to make sure your processor is supported before you attempt the install. If it is not supported, you will not be able to install 22.4.1 LTS, as the OS will not run without the driver. You can still use Ubuntu; but you will have to use an earlier version, such as 20.04.5.*
 
 ---
 
