@@ -62,7 +62,7 @@ This will enable WSL on your machine.
 
 ## Second Step: Install WSL2
 
-WSL2 is essentially a virtual machine that WSL uses to allow Linux to run GUI based applications. Beware, however: WSL2 still relies on the Windows rendering system, and as such, some of the more complex GUI based Linux apps (Anaconda Navigator and Spyder, for example) simply won't run under it. (There is, however, a workaround to this that I'll discuss towards the end of this tutorial.) 
+WSL2 is essentially a virtual machine that WSL uses to allow Linux to run GUI based applications. Beware, however: WSL2 still relies on the Windows rendering system, and as such, some of the more complex GUI based Linux apps (Anaconda Navigator and Spyder, for example) simply won't run under it. (The exception to this is Ubuntu 22.4.1 with the vGPU driver install, which seems to run virtually anything, so to speak. If you choose a different distro, there is a workaround to this limited functionality that I'll discuss towards the end of this tutorial.) 
 
 #### Prepare to Install WSL2
 
