@@ -1,1 +1,1 @@
-Iamges for all md files.
+Images for all md files.
