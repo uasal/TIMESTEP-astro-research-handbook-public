@@ -1,4 +1,4 @@
-![WL2 Linux](/Assets/Images/Penguin WSL.png)
+![WL2 Linux](/Assets/Images/PenguinWSL.png)
 
 ---
 
