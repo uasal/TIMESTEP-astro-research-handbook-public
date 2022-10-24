@@ -50,8 +50,10 @@ ___
 ## Second Step: Install and Configure VirtualBox
 First, download [VirtualBox for Windows](https://download.virtualbox.org/virtualbox/7.0.2/VirtualBox-7.0.2-154219-Win.exe). Documentation for VirtualBox can be found on the [VB Website](https://docs.oracle.com/en/virtualization/virtualbox/7.0/user/index.html). Run the installer and let it do its thing. After it completes, run the program. You'll be greated by a welcome window.  
 ### **Create a New Virtual Machine**
-CLick on the "New" icon. This will bring up an initial configuration window:
+CLick on the "New" icon. This will bring up an initial configuration window:  
+
 ![VM Configuration Window](/Assets/Images/NewVMWindow.png)  
+
 The settings should be as follows:  
 1. Name your operating system. I use 'UbuntuLTS'. You can call it anything, but preferably involve the name of the distro. 
 2. The 'Machine Folder' is where your VM is stored. Putting it under your user directory makes sense. (Your user directory is located in `C:\Users`.) You can name this directory anything you want... `VirtualBoxVMs` is a decent choice.
@@ -72,7 +74,7 @@ This is a series of windows that are used to create a virtual hard disk. This is
 
   ![Virtual Drive Configuration](/Assets/Images/VMConfig01.png)  
 
-  Now, hit '**Create**' and your new VM will be initiallized. You should see a windows that looks like this:  
+  Now, hit '**Create**' and your new VM will be initiallized. You should see a window that looks like this:  
 
   ![Initialized VM](/Assets/Images/InitializedVM.png)  
 
