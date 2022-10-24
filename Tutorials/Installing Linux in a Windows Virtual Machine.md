@@ -4,7 +4,7 @@ ___
  
  This tutorial will enable you to install Linux to your Windows PC using virtual machine software. A virtual Machine is a form of system software that runs in an operating system and imitates the hardware and software of an another computer. This allows you to run another operating system within your native operating system.
 
- While there are several virtual machine software options, Oracle's VM [VirtualBox](https://www.virtualbox.org/) is easy to install and configure, has a host of configuration settings, works very well with Linux, and is free. This tutorial will use VirtualBox as its VM software and Ubuntu as the installed Linux distribution. Ubuntu is considered to have the most Windows-like interface and is probably the easiest for Windows users to learn. If you choose a different VM software or Linux distribution, the process is similar, and I have included a bunch of helpful references at the end.
+ While there are several virtual machine software options, Oracle's VM [VirtualBox](https://www.virtualbox.org/) is easy to install and configure, has a host of configuration settings, works very well with Linux, and is free. This tutorial will use VirtualBox as its VM software and Ubuntu as the installed Linux distribution. Ubuntu is considered to have the most Windows-like interface and is probably the easiest for Windows users to learn. If you choose a different VM software or Linux distribution, the process is similar, and I have included references to a few other distros, along with their VM installation procedures.
  ___
  ## Windows PC Requirements  
 
@@ -36,7 +36,7 @@ If you meet these requirements, you are ready to proceed. If not, your choices a
 3. Dual Boot Windows and Linux
 ___
 ## First Step: Download your Linux Distribution
-The example distribution for this tutorial is Ubuntu 20.04.3 LTS. LTS means 'Long Term Support', which basically means that, throughout the lifetime of this particular version the Linux distro, the company is commited to releasing upgrades, security patches, and generally supporting the OS.
+The example distribution for this tutorial is Ubuntu 20.04.3 LTS. LTS means 'Long Term Support', which basically means that, throughout the lifetime of this particular version of the Linux distro, the company is commited to releasing upgrades, security patches, and generally supporting the OS.
 
 Ubuntu is the most commonly downloaded Linux distro. It also has the most similar interface to Windows. It is a mature flavor of Linux, and Cannonical offers users a lot of support and resources. Download [Ubuntu 20.04.3 LTS](https://ubuntu.com/download/desktop/thank-you?version=22.04.1&architecture=amd64).
 
