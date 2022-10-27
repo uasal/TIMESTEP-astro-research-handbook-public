@@ -81,13 +81,30 @@ This is a series of windows that are used to create a virtual hard disk. This is
   This ends the configuration of the Virtual Machine. TIme to load your distro!  
   ___
 
-  ## Third Step: Install Your Distro
+  ## Third Step: Install Your Distro  
+  
+  ### **Install Procedure**
 
   At the top of the initialization window, click on '**Start**'. This will launch the installer for your distribution image. Use the file icon next to the location box to navigate to wherever you stored your distro .iso file. Click '**Start**'. In the next window, click on your distro name and then sclick on '**Choose**'.
 
-  The Ubuntu installer should now pop open a window which gives you a choice between '**Try Ubuntu**' and '**Install Ubuntu**'. Select the **Install** option.
+  The Ubuntu installer should now pop open a window which gives you a choice between '**Try Ubuntu**' and '**Install Ubuntu**'. Select the **Install** option. You may encounter error messages; the two most common are addressed in the notes below.
 
   As Ubuntu installs, there will be a few installation options you may be asked, depending on your particular machine and Windows configuration. A good resource for answering these questions can be found in the discussion on the [Ubuntu Installation Flow](https://ubuntu.com/tutorials/install-ubuntu-desktop#5-installation-setup). After this is finsihed, there is only one more thing to do.
+  
+  ___
+  
+  ### **Handling Common Install Errors**  
+  
+  **Note 1**: If your install fails with a 'Kernel Panic' message in the log output, it is because VirtualBox did not allocate enough cores to the virtual machine. Fix this by doing the following:  
+  1. In the left hand panel of the main VB window, click on the menu icon next to the name of your virtual machine.
+  2. At the top of the right panel, click on the **Settings** menu.
+  3. Click on the **System** option in the left hand panel.
+  4. Click on the **Processor** tab.
+  5. The first slider is marked **Processor(s)**. It will probably be set to **1**. Increase this. Depending on how many cores your processor has, I would set this to at least **4**, but don't exceed 20% of your available cores, or you will throttle Windows when Linux is started.
+  6. If you get to the tab but the Processor slider is greyed out, exit out of setup, close VirtualBox, restart it, and then go back to step one above.
+  7. Once you've managed to change the number of processor cores, exit VirtualBox, restart it, and proceed with the installation.  
+
+**Note 2**: While installing Ubuntu, you may get a message that says **This computer currently has no detected operating system. What would you like to do?**, followed by **Erase disk and install Ubuntu**. This refers to your virtual disk and not your system's hard drive. Go ahead and select the option to erase your disk and proceed, scary as that may seem. Your system will be fine.
   ___  
   ## Fourth Step: Change your Window Resolution  
 
