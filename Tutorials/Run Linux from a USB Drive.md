@@ -1,10 +1,13 @@
 ![USB Linux](/Assets/Images/USBLinux.png)
-# How to Run Linux from a USB Drive  
+# How to Run Linux from a USB Drive
+___
 This tutorial will show you how to run Linux from a USB drive. THis is typically done using a USB thumbdrive, as they are portable and do not require drivers to use as a boot device.
 
 Running Linux from an external drive is not really a long term methodology, as it runs an operating system that essentially has situational amnesia. You are enot able to make system changes, install software, or do anything that reuires the operating system to write to a drive. Everytime you boot into it, it is the same as the time before, kind of like Bill Murray's reality in Groundhog Day. This is great for testing different flavors of Linux to make an informed choice of a dsitribution, but not so good if you want to continue to use Linux as a functioning operating system.
 
 Here's how to do this. It is actually very simple.
+
+___
 
 ## Pick and Download a Linux Distribution
 
@@ -19,9 +22,13 @@ Or, download another distro of your choice. Here are two other Linux distributio
 
 Which ever flavor you pick, you will need to download the .iso file to your PC.
 
+___
+
 ## Create a Bootable USB Drive with the Linux Files Installed
 
 You will need to have a USB Thumb drive with enough space to hold the Linux distribution source files for the distro you've chosen. Once you have this, follow the distro's instructions for preparing the source files to be installed. THis will usually involve using a piece of software specifically designed to do this, such as [Rufus](https://rufus.ie/en/) or [Etcher](https://etcher.download/). Your distro may suggest software as well; follow their suggestion. When finished, you should end up with a bootable install source on your thumbdrive.
+
+___
 
 ## Enable Windows to Boot From an External Drive
 
@@ -55,9 +62,13 @@ Unfortunately, one of UEFI's best features... secure boot... blocks the ability 
 
 Now, follow steps one and two above to tell your system to boot from a USB drive.
 
+___
+
 ## Choose the 'Try' Option
 
 Most Linux distros that can be run from a bootable USB drive will give you a startup option: '**Try Ubuntu**' or '**Install Ubuntu**', for instance. Select the try option, or Linux will begin to make changes to your system.
+
+___
 
 ## Congratulations!
 
