@@ -27,7 +27,7 @@ Remember, you not only need enough space to install Linux, but also enough space
 
 Most of the time, dual boot systems can be created without much risk, and generally the procedure goes well. But occasionally things can go wrong, primarily because the Windows boot system is finicky, and, in the world of operating systems, a bit clunky. 
 
-As in any major change to your machine, you should backup everything before you attempt this. Unlike with most changes to your machne, there is a small chance that you can wipe out your entire Windows installation with this process. If you do a complete backup first, you can recover your system. SO please, if you want to go this route, backup first.
+As in any major change to your machine, **you should backup everything before you attempt this**. Unlike with most changes to your machne, there is a small chance that you can wipe out your entire Windows installation with this process. If you do a complete backup first, you can recover your system. SO please, if you want to go this route, backup first.
 
 For a very good discussion on the perils of dual booting, [read this](https://www.makeuseof.com/tag/risks-dual-booting-windows-linux-operating-systems/).
 
@@ -38,7 +38,7 @@ If you've made it to this point, you have not been disuaded by the possible issu
 
 ### **Backup Your Machine**
 
-Intentional repetition: I can't emphasize enough... backup your machine!
+Intentional repetition: I can't emphasize enough... **backup your machine!**
 
 ### **Read Up on the Windows Boot Process**
 
@@ -70,7 +70,7 @@ Newer machines have UEFI type firmware, older machines have the older legacy BIO
 3. Click on **System Information**
 4. Scroll down the list until you find '**BIOS Mode**'
 
-**If you have a legacy BIOS, you need to follow a different install routine.** Since most PCs purchased in the last 5-7 years have UEFI type, this tutorial focuses on installing to UEFI firmware. The procedure for installing to legacy BIOS sytems is [here](https://itsfoss.com/install-ubuntu-dual-boot-mode-windows/).
+**If you have a legacy BIOS, you need to follow a different install routine.** Since most PCs purchased in the last 5-7 years have UEFI type firmware, this tutorial focuses on installing to UEFI firmware. The procedure for installing to legacy BIOS sytems is [here](https://itsfoss.com/install-ubuntu-dual-boot-mode-windows/).
 
 If you are in the UEFI camp, lets proceed.
 
@@ -140,3 +140,56 @@ There are essentially two ways to do this.
 Either way, turn your machine off. Insert the USB Thumbdrive. Turn the power on. Depending on what you did in the proceeding step, either let the machine boot itself from the USB drive, or hit the function key and select the appropriate option.
 ___
 ## Finally: Install Linux!
+
+How you proceed from this point depends largely on what Linux distro you are installing, but for purposes of this tutorial, I am going to use Ubuntu 22.04.1 LTS. Ubuntu is the most commonly downloaded Linux distro. It also has the most similar interface to Windows. It is a mature flavor of Linux, and Cannonical offers users a lot of support and resources. Download [Ubuntu 20.04.3 LTS](https://ubuntu.com/download/desktop/thank-you?version=22.04.1&architecture=amd64).
+
+The most important parts of this step are:
+1. Allowing your Linux distro install to partition and format the empty space you've allocated.
+2. Allowing your distro to handle establishing the dual boot.
+3. Configuring your installation to your personal preferences.  
+
+Here's how that looks with the Ubuntu install.
+
+### **Ubuntu Install Routine Starts**
+
+1. The first install message you should see is Ubuntu asking you if you want to try Linux, or install Linux. Select **Install**.
+2. Next, you'll be asked to pick your keyboard layout. Unless you are using an exotic keyboard of some sort, the default here is usually correct.
+3. The next choice you will have is a series of install options:
+- Under '**What apps would you like to install**', choose '**Normal**' or '**Minimal**'. Minimal leaves you with a really bare-boned installation. As a newcomer to Linux, choose '**Normal**' so that you have the basic set of apps and don't have to immediately search for functionality software, like text editors and file managers.
+- Choose '**Download Updates While Installing Ubuntu**', so that you start with the most recent file changes to the OS. Otherwise, you'll have to do this after the install. Might as well get it out of the way.
+- Choose '**Install Third Party Software**', which will seek out and load the appropriate drivers for your hardware. Again, best to let the install routine handle this, otherwise you may start without the OS being able to communicate with your graphics card, etc.
+
+### **Ubuntu (Should) Recognize Windows and Proceed Accordingly**  
+
+Here is where the installer should recognize that the system it is loading on has Windows installed. This is where the process deviates from a normal install. If all goes well, you will see a message saying '**Install Ubuntu Alongside Windows?**. Select '**Yes**'.
+
+If you do not see this message, **HALT THE INSTALLATION!**. This indicates that Ubuntu has detected critical issues with your Windows installation that need to be corrected before proceeding. If you don't halt the installation at this point, Ubuntu will wipe out your Windows system and install itself as your primary operating system.
+
+These are some of the conditions that will lead to this situation:  
+1. Windows was not shut down correctly or came out of hibernation at the start of the install routine. This frequently results from not disabling Fast Startup or Secure Boot. After you halt the install, go back and disable these functions and start the install again.
+2. Windows has a corrupted or damaged partition that you are not aware of. You will need to use Disk Manager and some other tools to find and repair the partition.
+3.  You didn't create the Linux partition with enough free space to install the operating system. You will have to go through the process of deleting the partition and expanding its size using Disk Manager.
+4.  Your windows system is using Dynamic Disk Allocation. You will need to use Disk Manager to change the offending drive to a fixed size.
+5.  Your system is extremely fragmented. The solution to this is to run disk defragmenter on your drives.  
+  
+Once you've dealt with these issues, the installation process can be restarted and Linux should detect your Windows system. Select '**Install Linux Alongside Windows**'.  
+
+### **Choosing Your Install Partition**
+
+Linux will ask where you want to install the OS. Select the partition that you created for the install. It will also present you with a slider to indicate how much of the selected drive you wish to allocate to the install. Since we created this partition specifically for the installation, select all of the available space. Select '**Install Now**'.
+
+If you see any notifications about resizing the Windows partition, **HALT THE INSTALLATION!**. This shouldn't happen if you've selected the correct drive, but if you see this message, something is wrong. Start the process again, and be sure you are making the correct choice of install partition.
+
+If everything looks good up to this point, Ubuntu will issue a few warnings about what it is about to do. Make sure these warnings seem to be correct in light of the changes you've selected. One note, however... these warnings will refer to your disks using partition information. If you are not sure that the partition it is mentioning is correct, open Disk Manager and make sure that the correct partition has been selected for install. If you are satisfied that the install routine is about to install to the correct partition, proceed. If you are unsure, **HALT THE INSTALLATION!**
+
+### **Ubuntu Installs**
+
+If all has gone well, Ubuntu begins to load itself. In the process, it will ask you some configuration questions, such as selecting your timezone, creating a user name and password, etc. Make sure you can remember your username and password, or write them down; without those, you will not have root access to your system, and this can not be fixed after the install. (Root access in a linux system is roughly the equivalent of administrative access in a Windows system. Without this, you cannot make fundamental and sometimes essential changes to your Linux OS.) 
+
+## Congratulations! Welcome to Linux!
+
+When Linux finishes installing, your system will reboot. When it starts again, you will see Linux's boot loader, which will ask you which operating system you wish to boot into. Linux's boot loader is text based and called GRUB, so don't be surprised when you see this. Select the first LINUX option and hit enter. Linux should load. If it does, all is well with the world. At this point, I would exit Linux and restart your machine. This time, select Windows and make sure that Windows loads as well. If it does, you have managed the dual boot installation without error. Congratulations!
+
+If it does not, you will have to troubleshoot the install. This can be complicated but a good first step is to read through [Common problems with Ubuntu and Windows Dual Boot Installations: The Muggle Tech Guide](https://medium.com/@mugglestudies/common-problems-with-ubuntu-and-windows-dual-boot-installations-the-official-muggle-studies-guide-653fa37116b2). If that does not address your issues, the next step is to seek help. You can contact me, Jess Johnson, at jajohnson@arizona.edu, or stop by my office (N404). If worse comes to worse, your system can be restores from the backup you made.
+
+You did make a backup, right?
