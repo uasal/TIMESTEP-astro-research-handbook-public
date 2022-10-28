@@ -10,7 +10,7 @@ One of the most important skills you should develop as early as possibe as a sci
 
 This discussion is written for interns whose principle computng platform is MS Windows. Those who use Apple PCs have it somewhat easier, as Apple operating systems are built on UNIX. If this is your platform, see 'Linux Considerations for TIMESTEP interns with Apple PCs".
 
-The first decision you must make, then, is how to access Linux, both for purposes of learning the OS in general, and specifically for your TIMESTEP work in learning the Linux command line. There are four relevant ways to do this. One of these involves accessing the university Linux server via a terminal and does not involve altering your personal computer, but only gives you remote access to a command line and therefore less overall usability. The other three involve some form of installing a Linux system to your PC, two of which are minorly disruptive to your pre-existing Windows installation, and one of which involves making a fairly substantial change to your system. Which one you choose is up to how much overall Linux functionality you desire.
+The first decision you must make, then, is how to access Linux, both for purposes of learning the OS in general, and specifically for your TIMESTEP work in learning the Linux command line. There are five relevant ways to do this. One of these involves accessing the university Linux server via a terminal and does not involve altering your personal computer, but only gives you remote access to a command line and therefore less overall usability. The second involves running linux from a thumbdrive. This also requires no changes to your Windows system, but has the disadvantage of resetting itself completely every time you decide to run Linux. The other three involve some form of installing a Linux system to your PC, two of which are minorly disruptive to your pre-existing Windows installation, and one of which involves making a fairly substantial change to your system. Which one you choose is up to how much overall Linux functionality you desire.
 
 ### Option One: Access the University Linux Server
 
@@ -25,7 +25,27 @@ Dr. Paschalitis, who will be instructing you in Linux, has an excellent tutorial
 - Limited graphic support, ie plot output from Gnuplot, etc.
 - Your file structure exists on a shared server.
 
-### Option Two: Install Linux using Windows WSL
+### Option Two: Run Linux From a USB Thumbdrive
+
+This option allows you to run Linux on your machine without making any changes to your pre-existing Windows install. In essence, you create a full bootable Linux system on an external drive (typically a USB thumbdrive), and instruct your machine to boot from that drive. You neatly bypass Windows, and Linux runs from the external drive.
+
+This option is usually used to test out versions of Linux to make an informed decision about what distro you want to install. It is not really a viable long term option, for one important reason... you can't save changes to the system, install software, or use functionality that requires the OS to write to a drive. It essentially has permanent amnesia... as soon as you shut down the system, it forgets it was ever there to begin with.
+
+While there are some workarounds to this, not all Linux systems allow them. If you want to experience different Linux systems before making a decision, this is a great option. If you want to have a funtioning, usable system on your PC, this is the least preferable option.  
+
+- #### **Pros**
+- Easy to use once the USB drive is created.
+- No alteration to your computer required.
+- Meets the minimal requirement of having access to a Linux command line.
+- Allows you to experience multiple flavors of Linux
+- #### **Cons**
+- Not a durable Linux system. Resets itself each time it is booted.
+- Cannot modify the operating system
+- Cannot install software
+
+Instructions for running Linux from a bootable USB drive are in the [Run Linux From a USB Drive Tutorial](/Tutorials/Run%20Linux%20from%20a%20USB%20Drive.md).  
+
+### Option Three: Install Linux using Windows WSL
 
 This option takes advantage of a relatively new functionality Microsoft has built into Windows, called the **Windows Subsystem for Linux**. This is the least invasive way to have access to both command line Linux and GUI functionality. Per Microsoft: "The Windows Subsystem for Linux lets developers run a GNU/Linux environment -- including most command-line tools, utilities, and applications -- directly on Windows, unmodified, without the overhead of a traditional virtual machine or dualboot setup."  Ignore the 'developers' portion of that sentence... it works just as well for anyone else. When you install Linux through WSL, you are, in essence, running the Linux kernel on top of the Windows kernel, making Linux fast and resource light. For a discussion of WSL, see [FAQs About WSL](https://learn.microsoft.com/en-us/windows/wsl/faq). 
 
@@ -43,7 +63,7 @@ Since that FAQ was written, Microsoft has added WSL2 and WSLg, which gives you n
 
 For directions on installing WSL Linux to your Windows PC, see [Installing Windows Command Line Linux](/Tutorials/Installing%20Windows%20Command%20Line%20Linux.md)  
 
-### **Option Three: Install Linux in a Windows Virtual Machine**
+### **Option Four: Install Linux in a Windows Virtual Machine**
 
 This option allows you to install a complete Linux distribution to your Windows PC... graphical user interface and all... while making fairly easy changes to your operating system and PC setup that are also easily reversed. A virtual Machine is a form of system software that runs in an operating system and imitates the hardware and software of an another computer. This allows you to run another operating system within your native operating system. To the user, open a window, or blow the window up to full screen, and it looks just like a full blown Linux installation inside. To the linux installation itself, it appears that it is installed and running on it's own hardware. 
 
@@ -65,7 +85,7 @@ If you decide to go for this option, Virtual Machine software is fairly easy to 
 
 For directions on installing Linux in a virtual machine, see [Installing Virtual Machine Linux](/Tutorials/How to Install Linux in a Windows Virtual Machine.md) 
 
-### **Option Four: Dual Boot Windows & Linux**
+### **Option Five: Dual Boot Windows & Linux**
 
 This is the closest you can get to dedicating your PC entirely to Linux without actually doing so. With a dual boot system, you choose which operating system you want to run each time you start your PC. Unlike Virtual Box Linux, you can't just flip quickly between operating systems... you have to shut down and reboot to go from one to the other.  But also unlike VB Linux, Linux is not constrained by Windows consuming excessive system resources. You get the full experience of running Linux as your native OS while keeping your Windows installation. Linux, as mentioned in the opening paragraph, utilizes system resources far better than Windows does, and so you may be pleasently surprised to find your machine functions faster than under Windows.
 
