@@ -72,8 +72,8 @@ Just to be clear, your machine's operating system is still Windows... Linux is r
 If you decide to go for this option, Virtual Machine software is fairly easy to install, configure and use. Probably the best one available for running Linux is Oracle's [VM Virtual Box](https://www.oracle.com/virtualization/virtualbox/). As mentioned, should you decide that you wish to remove this form of Linux, this type of installation is also fairly easy to remove.
 
 - #### **Pros**
-- Only minor, reversible changes to your existing Windows installation... roughly the equivalent of installing several pieces of softwar.e
-- Little or no impact on the operation of Windows itself, unless you want to be running both Windows and Linux side by side and working between the two
+- Only minor, reversible changes to your existing Windows installation... roughly the equivalent of installing several pieces of software.
+- Little or no impact on the operation of Windows itself, unless you want to be running both Windows and Linux side by side and working between the two.
 - You CAN work side by side between the two.
 - Gives the full experience of GUI based Linux.
 - Fairly easy to install; if you are good at following straightforward install directions, there is little here that is complicated or tricky.
@@ -87,7 +87,7 @@ For directions on installing Linux in a virtual machine, see [Installing Virtual
 
 ### **Option Five: Dual Boot Windows & Linux**
 
-This is the closest you can get to dedicating your PC entirely to Linux without actually doing so. With a dual boot system, you choose which operating system you want to run each time you start your PC. Unlike Virtual Box Linux, you can't just flip quickly between operating systems... you have to shut down and reboot to go from one to the other.  But also unlike VB Linux, Linux is not constrained by Windows consuming excessive system resources. You get the full experience of running Linux as your native OS while keeping your Windows installation. Linux, as mentioned in the opening paragraph, utilizes system resources far better than Windows does, and so you may be pleasently surprised to find your machine functions faster than under Windows.
+This is the closest you can get to dedicating your PC entirely to Linux without actually doing so. With a dual boot system, you choose which operating system you want to run each time you start your PC. Unlike Virtual Box Linux, you can't just flip quickly between operating systems... you have to shut down and reboot to go from one to the other.  But also unlike VB Linux, Linux is not constrained by Windows consuming excessive system resources. You get the full experience of running Linux as your native OS while keeping your Windows installation. Linux utilizes system resources far better than Windows does, and so you may be pleasently surprised to find your machine functions faster than under Windows.
 
 However, dual boot systems in Windows can be tricky to install (mostly due to partitioning considerations), and consume larger amounts of hard drive space as you have to provide space for two operating systems, cutting down the space available to each one. Because of this, dual booting may not be viable option if you have a PC that has a small drive, a mostly full drive, or cannot have an adiitional drive added (like most laptops). Removing a dual boot installation and returning your PC to its original state can also be tricky, given Windows propensity to dislike changes to its boot sector and boot manager. Again, if you are good at following install instructions and have some degree of troubleshooting skill (should something go amiss), this is perhaps the best of all options to immerse yourself in Linux without giving up Windows entirely.
 
