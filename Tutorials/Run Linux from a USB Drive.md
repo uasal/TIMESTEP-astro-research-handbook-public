@@ -2,9 +2,9 @@
 
 ___
 # How to Run Linux from a USB Drive
-This tutorial will show you how to run Linux from a USB drive. THis is typically done using a USB thumbdrive, as they are portable and do not require drivers to use as a boot device.
+This tutorial will show you how to run Linux from a USB drive. This is typically done using a USB thumbdrive, as they are portable and do not require drivers to use as a boot device.
 
-Running Linux from an external drive is not really a long term methodology, as it runs an operating system that essentially has situational amnesia. You are enot able to make system changes, install software, or do anything that reuires the operating system to write to a drive. Everytime you boot into it, it is the same as the time before, kind of like Bill Murray's reality in Groundhog Day. This is great for testing different flavors of Linux to make an informed choice of a dsitribution, but not so good if you want to continue to use Linux as a functioning operating system.
+Running Linux from an external drive is not really a long term methodology, as it runs an operating system that essentially has situational amnesia. You are not able to make system changes, install software, or do anything that requires the operating system to write to a drive. Everytime you boot into it, it is the same as the time before, kind of like Bill Murray's reality in Groundhog Day. This is great for testing different flavors of Linux to make an informed choice of a dsitribution, but not so good if you want to continue to use Linux as a functioning operating system.
 
 Here's how to do this. It is actually very simple.
 
@@ -14,7 +14,7 @@ ___
 
 The example distribution for this tutorial is Ubuntu 20.04.3 LTS. LTS means 'Long Term Support', which basically means that, throughout the lifetime of this particular version of the Linux distro, the company is commited to releasing upgrades, security patches, and generally supporting the OS.
 
-Ubuntu is the most commonly downloaded Linux distro. It also has the most similar interface to Windows. It is a mature flavor of Linux, and Cannonical offers users a lot of support and resources. Download [Ubuntu 20.04.3 LTS](https://ubuntu.com/download/desktop/thank-you?version=22.04.1&architecture=amd64).
+Ubuntu is the most commonly downloaded Linux distro. It also has the most similar interface to Windows. It is a mature flavor of Linux, and its developer, Cannonical, offers users a considerable amount of support and resources. Download [Ubuntu 20.04.3 LTS](https://ubuntu.com/download/desktop/thank-you?version=22.04.1&architecture=amd64).
 
 Or, download another distro of your choice. Here are two other Linux distributions that might be of interest:
  
@@ -27,7 +27,7 @@ ___
 
 ## Create a Bootable USB Drive with the Linux Files Installed
 
-You will need to have a USB Thumb drive with enough space to hold the Linux distribution source files for the distro you've chosen. Once you have this, follow the distro's instructions for preparing the source files to be installed. THis will usually involve using a piece of software specifically designed to do this, such as [Rufus](https://rufus.ie/en/) or [Etcher](https://etcher.download/). Your distro may suggest software as well; follow their suggestion. When finished, you should end up with a bootable install source on your thumbdrive.
+You will need to have a USB Thumb drive with enough space to hold the Linux distribution source files for the distro you've chosen. Once you have this, follow the distro's instructions for preparing the source files to be installed. THis will usually involve using a piece of software specifically designed to do this, such as [Rufus](https://rufus.ie/en/) or [Etcher](https://etcher.download/). Your distro may suggest software as well; follow their suggestion. Point the routine to the .iso file you downloaded, and, when finished, you should end up with a bootable install source on your thumbdrive.
 
 ___
 
@@ -42,8 +42,8 @@ Newer machines have UEFI type firmware, older machines have the older legacy BIO
 4. Scroll down the list until you find '**BIOS Mode**'
 
 **If you have legacy BIOS firmware**: The only change you need to make is to enable your system to boot from an external drive. There are two ways to do this.
-  1. Some machines allow you to select a boot menu during startup. Depending on your manufacturer, this is usually accomplished by hitting the F10 or F12 key during boot. To ensure that your machine recognizes the input, you may need to hit the key repetitively during the boot process.  Insert the USB drive into a port. Boot the machine. Hit the appropriate function key. If you are succesful, you'll be presented with a menu offering you boot drive choices. In some cases your USB drive will be listed by name; in other cases, you'll see something like '**External Drive**', '**BootableDrives**', etc. Select the right choice, and the system will boot from your Linux drive. 
-  2. You can also change your BIOS settings to always search for an external drive to boot from. If you do not have a USB in a port, Windows proceeds as normal. If you do, it will try to boot from it everytime it starts. To make this change, enter your BIOS and look for where boot order is set. Change this so that the first thing the system looks for is a bootable USB drive. Exit BIOS, insert your bootable Linux drive, and your PC will boot into Linux. 
+  1. Some machines allow you to select a boot menu during startup. Depending on your manufacturer, this is usually accomplished by hitting the F10 or F12 key during boot. (To ensure that your machine recognizes the input, you may need to hit the key repetitively during the boot process.)  Insert the USB drive into a port. Boot the machine. Hit the appropriate function key. If you are succesful, you'll be presented with a menu offering you boot drive choices. In some cases your USB drive will be listed by name; in other cases, you'll see something like '**External Drive**', '**BootableDrives**', etc. Select the right choice, and the system will boot from your Linux drive. 
+  2. You can also change your BIOS settings to always search for an external drive to boot from. With this setting turned on, if you start your machine without a USB boot drive in a port, Windows loads as normal. If you do have a bootable USB drive in a port, your machine will attempt to boot from it. To make this change, insert your USB drive, hit whatever function key your sustem uses to enter your BIOS SETTINGS, and look for where boot order is set. Change this so that the first thing the system looks for is a bootable USB drive. With your USB in place, the BIOS may have it listed by name. Otherwise, look for "**Bootable Devices**", "**USB Drives**", or something similar. Move the device to the top of the boot order, then exit and save the BIOS settings, and your PC should boot into Linux. 
 
 **If you have UEFI firmware**: You have to make two other adjustments to your settings before doing the above. Windows dislikes sharing the limelight with another operating system, and a few windows settings will interfere with Linux booting or flat out block it from booting. Let's fix that.
 
@@ -57,7 +57,7 @@ Newer machines have UEFI type firmware, older machines have the older legacy BIO
 
 - **Disable Secure Boot**: Unfortunately, one of UEFI's best features... secure boot... blocks the ability to boot into Linux, so we have to disable it. This is done from the UEFI settings, which means you will have to restart your machine. Instructions for disabling Secure Boot are [here](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/disabling-secure-boot?view=windows-11). 
 
-Now, follow steps one and two above to tell your system to boot from a USB drive.
+Now, follow steps one and two above to tell your system to boot from your USB drive.
 
 ___
 
