@@ -38,26 +38,26 @@ Let's, um... Git started!
     ```
 4) Your directory is now version controlled by Git, and has become your *Working Directory*. You'll notice that Git created a `.git` directory within your project directory. (If you don't see it, it's because it's hidden. In MacOS or Linux, use the command `ls -a`. In Windows, use the command `dir /ah`. )  
 5) In your new directory, create a text file. Mine is called `LogEntry001.txt`.
-3) Using a text editor, write something in this file. (You can use the Windows native Notepad for this purpose, or any other text editor). Here's what I wrote:
+6) Using a text editor, write something in this file. (You can use the Windows native Notepad for this purpose, or any other text editor).
 ![LogEntry001.txt](Assets/20221201134527.png)
-6) Git's 'status' command lists the state of files in your working directory. Enter the following command:
+7) Git's 'status' command lists the state of files in your working directory. Enter the following command:
     ```
     git status
     ```
-6) Git should respond by telling you that you have an *untracked file:* LogEntry001.txt, and then tell you to use "git add" to track, like this:  
+8) Git should respond by telling you that you have an *untracked file:* LogEntry001.txt, and then tell you to use "git add" to track, like this:  
 ![Untracked File](Assets/20221205230220.png)
-An 'untracked file is one that is still not 'versioned'... meaning that Git is aware it exists, but hasn't yet saved it in the repository database.
+9) An 'untracked file is one that is still not 'versioned'... meaning that Git is aware it exists, but hasn't yet saved it in the repository database.
 
 ### Adding Project Files to be Version Controlled
 
-1) At this point, your database does not contain any files. As we talked about in the first Git presentation, we have to move the file from the working directory to the Staging Area first, thereby telling Git we want to include it into the database during our next *Commit*. so, enter the command:
+1) At this point, your database does not contain any files. As we talked about in the first Git presentation, we have to move the file from the working directory to the Staging Area first, thereby telling Git we want to include it into the database during our next *Commit*. We do this by entering the command
     ```
     git add LogEntry001.txt
     ```
 
 2) Git doesn't tell you anything after the `add` command, unless there is an error, so use `git status` again to check. you should see something like this:
 	![Git Status](Assets/20221205230343.png)
-1) Note that at this stage, your database is still empty... no files have yet to be *committed*. Let's fix that now. Enter the following command with whatever message you'd like to save to describe the commit filled in after the '-m' switch:
+3) Note that at this stage, your database is still empty... no files have yet to be *committed*. Let's fix that now. Enter the following command with whatever message you'd like to save to describe the commit filled in after the '-m' switch:
    ```
    git commit -m "My first committed file"
    ```
@@ -67,26 +67,25 @@ An 'untracked file is one that is still not 'versioned'... meaning that Git is a
    ```
 5) You'll see something similar to this:
 ![Committed File](Assets/20221205231218.png)
-The long hexadecimal string after the word 'commit' is the SA-1 commit hash, as we talked about in the presentation. It uniquely identifies this commit to the database... it is like a identification tag that labels this snapshot of the database. (If you want to see what the database contains when this commit/snapshot was taken, go to this identifier.)  But remember, the database only contains files that you have committed to it. Files that you have in your working directory, but have never tracked by adding to the staging area and committed, are not stored in the repository database. 
+6) The long hexadecimal string after the word 'commit' is the SA-1 commit hash, as we talked about in the presentation. It uniquely identifies this commit to the database... it is like a identification tag that labels this snapshot of the database. (If you want to see what the database contains when this commit/snapshot was taken, go to this identifier.)  But remember, the database only contains files that you have committed to it. Files that you have in your working directory, but have never tracked by adding to the staging area and committed, are not stored in the repository database. 
 
-6) Take a screen shot of the output for future use.
+7) Take a screen shot of the output for future use.
 
-7) Now, let's create another file with a bit of content. Mine is called `LogEntry002.txt`. Use your text editor to also add a bit of content to this file. Mine looks like this:
+8) Now, let's create another file with a bit of content. Mine is called `LogEntry002.txt`. Use your text editor to also add a bit of content to this file. Mine looks like this:
 ![LogEntry002.txt](Assets/20221205225600.png)
 9) Let's also go back and make a change to our original file. I'm going to use my text editor to fix the error I made in LogEntry001.txt. Compare the new contents to the original file content image above. Do you see the difference?
 ![LogEntry002.txt](Assets/20221201144440.png)
-8) Now, before adding, check git's status again. When I do this, this is my output:
+10) Now, before adding, check git's status again. When I do this, this is my output:
 ![Output](Assets/20221205230706.png)
- It tells me that I have modified a file in my working directory, as well as added a file that is not yet being tracked. Let's move them both to the staging area, and then commit them. Here's the commands I used to do this:
-   ```
-   git add LogEntry001.txt
-   git add LogEntry002.txt
-   git commit -m "added a new Log Entry, corrected mistake in previous Log Entry"
-   ```
+11) It tells me that I have modified a file in my working directory, as well as added a file that is not yet being tracked. Let's move them both to the staging area, and then commit them. Here's the commands I used to do this:
+    ```
+    git add LogEntry001.txt
+    git add LogEntry002.txt
+    git commit -m "added a new Log Entry, corrected mistake in previous Log Entry"
+    ```
+12) Next I'll check the log with `git log`:
+![Git Log](Assets/20221205230856.png)
 
-9) Next I'll check the log with `git log':
-
-	![Git Log](Assets/20221205230856.png)
 As expected, I see the entries for two seperate commits. Git output is 'most recent first', so the first is the commit we just processed, and the second is the original commit we used for LogEntry001.txt. (You can verify this by comparing the hash number  to the screenshot of the output from your first commit.)
 
 ###  Who Says Time Travel is Not Possible?
@@ -211,7 +210,7 @@ One other use of Diff that is handy to know at this point is using it to compare
 
 *Hint: Most terminals allow you to use the up arrow to move backwards through previously entered CLI commands. Since we just used reset, instead of typing it out again, use the up arrow a few times and the command will be there. When you find it, just hit enter.*
 
-Now let's use diff to find the differences in all files thqt have changed between our first commit and our second commit:
+Now let's use diff to find the differences in all files that have changed between our first commit and our second commit:
 
 ```
 git diff --color-words f213bc 67c967
